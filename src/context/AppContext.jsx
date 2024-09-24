@@ -15,6 +15,9 @@ const AppContextProvider = (props) => {
     const [messagesId,setMessagesId] = useState(null);
     const [messages,setMessages] = useState([]);
     const [chatUser,setChatUser] = useState(null);
+    //chatvisible true means we have to show chat data. and if false we have to show leftsidebar
+    const [chatVisible,setChatVisible] = useState(false);
+
     // with the help of uid we can load the userChat data and other data
     const loadUserData = async (uid) =>{
         try{
@@ -75,7 +78,8 @@ const AppContextProvider = (props) => {
           loadUserData,
           messages,setMessages,
           messagesId,setMessagesId,
-          chatUser,setChatUser
+          chatUser,setChatUser,
+          chatVisible,setChatVisible
     }
 
     return (

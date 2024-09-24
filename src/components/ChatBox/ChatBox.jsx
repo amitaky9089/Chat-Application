@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 import upload from "../../lib/upload";
 
 const ChatBox = () => {
-  const { userData, messagesId, chatUser, messages, setMessages } =
+  const { userData, messagesId, chatUser, messages, setMessages, chatVisible,setChatVisible } =
     useContext(AppContext);
   const [input, setInput] = useState("");
 
