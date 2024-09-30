@@ -81,7 +81,8 @@ const AppContextProvider = (props) => {
           chatUser,setChatUser,
           chatVisible,setChatVisible
     }
-
+//when chatVisible is true we will display the chat box.
+//and when false we have to display left side bar only.
     return (
         <AppContext.Provider value = {value}>
             {props.children}

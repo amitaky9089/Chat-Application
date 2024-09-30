@@ -121,7 +121,7 @@ const ChatBox = () => {
   }, [messagesId]);
 
   return chatUser ? (
-    <div className="chat-box">
+    <div className={`chat-box ${chatVisible?"":"hidden"}`}>
       {/* top section  */}
 
       <div className="chat-user">
@@ -132,6 +132,7 @@ const ChatBox = () => {
           {Date.now()-chatUser.userData.lastSeen <= 70000 ? <img className="dot" src={assets.green_dot} /> : null}
         </p>
         <img src={assets.help_icon} className="help" alt="" />
+        <img src={assets.arrow_icon} onClick={()=>setChatVisible(false)} alt="" className="arrow"/>
       </div>
 
       {/* middle portion */}
@@ -189,7 +190,7 @@ const ChatBox = () => {
       </div>
     </div>
   ) : (
-    <div className="chat-welcome">
+    <div className={`chat-welcome ${chatVisible?"":"hidden"}`}>
       <img src={assets.logo_icon} alt="" />
       <p>Chat anytime, anywhere</p>
     </div>

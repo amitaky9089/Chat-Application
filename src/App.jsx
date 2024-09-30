@@ -9,7 +9,7 @@ import { useContext, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import {auth} from './config/firebase'
 import { AppContext } from './context/AppContext';
-
+import './index.css'
 const App = () => {
 
   const navigate=useNavigate();//for navigation purpose

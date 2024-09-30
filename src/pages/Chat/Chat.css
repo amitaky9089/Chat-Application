@@ -23,6 +23,9 @@
     .chat-container{
         display: flex;
     }
+    .chat-box{
+        /* display: flex; */
+    }
     .loading{
         font-size: 30px;
     }
